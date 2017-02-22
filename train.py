@@ -19,6 +19,7 @@ if __name__ == "__main__":
     # env = MarubatsuEnvironment()
     env = ReversiEnvironment()
     agent = MarubatsuAgent(env.n_actions) 
+    agent.load_model()  # if allradey model file exsists then load the file
 
     r_win = 1.0
     r_draw = -0.5
@@ -108,7 +109,7 @@ if __name__ == "__main__":
             elif reward == r_draw:
                 total_draw += 1
             elif reward == r_lose:
-                agent.update_eps(1.25)
+                agent.update_eps(1.05)
                 total_lose += 1
 
             # 今回の結果を表示

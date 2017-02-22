@@ -72,7 +72,7 @@ class MarubatsuAgent: #(Agent):
         self.capacity = 1 * 10**4
 
         # eps = ランダムに○を決定する確率
-        self.eps_start = 0.7
+        self.eps_start = 0.5
         self.eps_end = 0.001
 
         # 学習時にさかのぼるAction数
@@ -115,7 +115,7 @@ class MarubatsuAgent: #(Agent):
 
         # 自分
         self.gamma =  0.99 #DISCOUNTFACTOR
-        self.Q = QNet(self.bdim*self.n_frames, 30, self.dim)
+        self.Q = QNet(self.bdim*self.n_frames, 200, self.dim)
 
         self.xp = np 
 

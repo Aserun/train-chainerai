@@ -7,20 +7,24 @@ python train.py
 ```
 
 ### Test
-```
 http://www.structuralengine.com/?p=7#test
-```
+
 
 ## Requirements
 * chainer
 * numpy
 
-## Model
+
+## Learning Model
+
 ### Black - initiative player
 http://www.structuralengine.com/reversi/train-chainerai/agent1.model
+
 http://www.structuralengine.com/reversi/train-chainerai/agent1.state
+
 
 ### White - second player
 http://www.structuralengine.com/reversi/train-chainerai/agent2.model
+
 http://www.structuralengine.com/reversi/train-chainerai/agent2.state
 
