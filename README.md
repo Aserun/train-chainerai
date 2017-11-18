@@ -1,30 +1,18 @@
-# chainer implementation of DQN
+#勉強する教材
+オセロAIに関して私が理解できる本は唯一これだけでした
+<a href = "http://shop.ohmsha.co.jp/shopdetail/000000004775/">
+<img src="https://qiita-image-store.s3.amazonaws.com/0/142847/8454f7c0-443d-16bd-dad7-5e6d3b1a38bb.jpeg" width=40%> </a>
+この本の **第６章 強化学習ー三目並べに強いコンピューターを育てる**
+を元にオセロAIを作成します。
 
-## Usage
-### Train
-```
-python train.py
-```
-
-### Test
-http://www.structuralengine.com/?p=7#test
+この他に参考になる書籍をご存知の方ご教示ください
 
 
-## Requirements
-* chainer
-* numpy
+#まずは教科書通り...と言いたいところですが
 
+この本の **第６章 強化学習ー三目並べに強いコンピューターを育てる**
+では下記の点が気に食わないので、改良したものを 再始動の初期状態とします。
 
-## Learning Model
+1. python2 を python3 に変換する
 
-### Black - initiative player
-http://www.structuralengine.com/reversi/train-chainerai/agent1.model
-
-http://www.structuralengine.com/reversi/train-chainerai/agent1.state
-
-
-### White - second player
-http://www.structuralengine.com/reversi/train-chainerai/agent2.model
-
-http://www.structuralengine.com/reversi/train-chainerai/agent2.state
-
+2. **RL-Glue** という仕組みは、削除する (私には難しい)
