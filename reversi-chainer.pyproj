@@ -6,7 +6,7 @@
     <ProjectGuid>a69cfb84-6d1a-4432-b343-14ac42c88de4</ProjectGuid>
     <ProjectHome>
     </ProjectHome>
-    <StartupFile>train.py</StartupFile>
+    <StartupFile>experiment.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -25,19 +25,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="agent.py" />
-    <Compile Include="reversi.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="train.py">
-      <SubType>Code</SubType>
-    </Compile>
+    <Compile Include="environment.py" />
+    <Compile Include="experiment.py" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
-    <PtvsTargetsFile>$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets</PtvsTargetsFile>
   </PropertyGroup>
-  <Import Condition="Exists($(PtvsTargetsFile))" Project="$(PtvsTargetsFile)" />
-  <Import Condition="!Exists($(PtvsTargetsFile))" Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
        Visual Studio and specify your pre- and post-build commands in
        the BeforeBuild and AfterBuild targets below. -->
@@ -46,4 +39,5 @@
   </Target>
   <Target Name="AfterBuild">
   </Target>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
 </Project>

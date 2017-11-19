@@ -1,30 +1,38 @@
-# chainer implementation of DQN
 
-## Usage
-### Train
+#勉強する教材
+
+オセロAIに関して私が理解できる本は唯一これだけでした
+
+<a href = "http://shop.ohmsha.co.jp/shopdetail/000000004775/">
+<img src="https://qiita-image-store.s3.amazonaws.com/0/142847/8454f7c0-443d-16bd-dad7-5e6d3b1a38bb.jpeg" width=40%> </a>
+
+この本の **第６章 強化学習ー三目並べに強いコンピューターを育てる**
+を元にオセロAIを作成します。
+
+この他に参考になる書籍をご存知の方ご教示ください
+
+
+#まずは教科書通り...と言いたいところですが
+
+この本の **第６章 強化学習ー三目並べに強いコンピューターを育てる**
+
+今回は、中間層の数とか細かいところは この本のままで、下記の修正をしました
+
+- 入力層と出力層を 3×3 → 8×8 に変更しました。
+- オセロは空白でも置けないマスがある
+- 置けない場合パスする動作を追加
+- 対戦相手は、完全なランダム
+
+改良したものを 再始動の初期状態とします。
+
+
+#学習するには
+
+```text:
+$ cd train-chainerai
+$ python experiment.py
 ```
-python train.py
-```
 
-### Test
-http://www.structuralengine.com/?p=7#test
-
-
-## Requirements
-* chainer
-* numpy
-
-
-## Learning Model
-
-### Black - initiative player
-http://www.structuralengine.com/reversi/train-chainerai/agent1.model
-
-http://www.structuralengine.com/reversi/train-chainerai/agent1.state
-
-
-### White - second player
-http://www.structuralengine.com/reversi/train-chainerai/agent2.model
-
-http://www.structuralengine.com/reversi/train-chainerai/agent2.state
+#下図の勝率図で、正しく学習出来ていることを確認
+![](https://github.com/sasaco/train-chainerai/blob/%231/percentages.png)
 
