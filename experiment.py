@@ -99,6 +99,9 @@ if __name__ == "__main__":
             total_draw = 0
             total_lose = 0
 
+    # 学習結果をファイルに書出し
+    agent.save_model() 
+
     # 学習結果をグラフで出力
     plt.plot(np.asarray(ns_epoch), np.asarray(pcts_win_or_draw))
     plt.xlabel('episode')
