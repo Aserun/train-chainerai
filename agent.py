@@ -13,7 +13,7 @@ import chainer.functions as F
 import chainer.links as L
 from chainer import cuda
 from chainer import optimizers
-
+from chainer import serializers
 
 
 class QNet(chainer.Chain):
@@ -140,7 +140,7 @@ class MarubatsuAgent():
         # stepを1増やす
         self.step_counter += 1
 
-        # mapを[0-2]の9ユニットから[0-1]の18ユニットに変換する
+        # mapを[0-2]の64ユニットから[0-1]の128ユニットに変換する
         self.update_state(map)
 
         self.update_targetQ()

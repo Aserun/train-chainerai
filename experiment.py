@@ -40,8 +40,8 @@ if __name__ == "__main__":
     r_draw = -0.5
     r_lose = -1.0
 
-    # 50,000回実行
-    for _ in range(0, 5 * 10**4):
+    # 500,000回実行
+    for _ in range(0, 5 * 10**5):
 
         # 強化学習の主処理
         which_episode += 1
